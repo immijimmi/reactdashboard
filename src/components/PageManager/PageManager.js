@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import PageData from "../../cls/constants";
-import Dashboard from "../Dashboard/Dashboard"
+import Dashboard from "../Dashboard/Dashboard";
 
 function PageManager() {
     const [page, setPage] = useState(PageData.keys.dashboard)
