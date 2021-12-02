@@ -1,7 +1,8 @@
+import PageManager from "./components/PageManager/PageManager"
+
 function App() {
   return (
-    <div>
-    </div>
+    <PageManager />
   );
 }
 
