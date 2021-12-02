@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 import PageData from "../../cls/constants";
-import Dashboard from "../Dashboard/Dashboard";
+import Welcome from "../Welcome/Welcome";
+import NotFound from "../NotFound/NotFound";
 
-function PageManager() {
-    const [page, setPage] = useState(PageData.keys.dashboard)
-
-    function resetPage() {
-        return setPage(PageData.keys.dashboard);
-    }
-
-    switch (page) {
-        case PageData.keys.dashboard:
+function PageManager(props) {
+    switch (props.page) {
+        case PageData.keys.welcome:
             return (
-                <Dashboard setPage={setPage} />
+                <Welcome />
             );
         default:
-            throw TypeError(`Invalid value provided for page key: ${page}`)
+            return (
+                <NotFound />
+            );
     }
 }
 

@@ -1,10 +1,10 @@
 class PageData {
     static keys = {
-        dashboard: 0
+        welcome: 0
     }
 
     static names = {
-        [PageData.keys.dashboard]: "Dashboard"
+        [PageData.keys.welcome]: "Home"
     }
 }
 
