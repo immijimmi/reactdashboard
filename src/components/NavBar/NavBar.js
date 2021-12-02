@@ -1,13 +1,18 @@
 import React from "react";
-
-import PageData from "../../cls/constants";
+import { useNavigate } from "react-router-dom";
 import "../Component.css";
 import "./NavBar.css"
 
 function NavBar() {
+    const navigate = useNavigate();
+
+    const buttonClasses = "baseFont rounded button"
+
     return (
-        <div className="roundedBox headerBar">
-        </div>  // TODO
+        <div className="rounded verticalCenteredChildren headerBar">
+            <button className={buttonClasses} onClick={() => navigate("/")}>Home</button>
+            <button className={buttonClasses} onClick={() => navigate("/notfound")}>?</button>
+        </div>
     );
 }
 

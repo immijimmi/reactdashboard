@@ -1,7 +1,6 @@
 import React from "react";
-
-import "./NotFound.css"
 import notFoundImage from "../../../res/notfound.png";
+import "./NotFound.css"
 
 function NotFound() {
     return (

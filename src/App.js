@@ -1,22 +1,22 @@
-import React, { createContext, useState } from "react";
-
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import PageManager from "./components/PageManager/PageManager";
-import PageData from "./cls/constants";
+import Welcome from "./components/Welcome/Welcome";
+import NotFound from "./components/NotFound/NotFound";
 import "./App.css";
 
-export const PageContext = createContext(null);
 
 function App() {
-  const [page, setPage] = useState(PageData.keys.welcome)
-
   return (
-    <PageContext.Provider value={{ page, setPage }}>
+    <Router>
       <div className="app">
         <NavBar />
-        <PageManager />
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/notfound" element={<NotFound />} />
+        </Routes>
       </div>
-    </PageContext.Provider>
+    </Router>
   );
 }
 

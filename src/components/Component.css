@@ -1,5 +1,36 @@
 /* Generic styles that can be used by multiple components go here */
 
-.roundedBox {
+.baseFont {
+    font-size: 16px;
+    font-family: "Helvetica";
+}
+
+.rounded {
     border-radius: 5px;
+    margin: 4px;
+    padding: 4px;
+}
+
+.centeredChildren {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verticalCenteredChildren {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background-color: rgba(210, 206, 229, 0.15);
+    color: white;
+    border-width: 0;
+
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.button:hover {
+    background-color: rgba(210, 206, 229, 0.35);
 }
