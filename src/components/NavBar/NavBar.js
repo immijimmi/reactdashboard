@@ -1,8 +1,12 @@
 import React from "react";
 
+import PageData from "../../cls/constants";
+import "../Component.css";
+import "./NavBar.css"
+
 function NavBar() {
     return (
-        <div>
+        <div className="roundedBox headerBar">
         </div>  // TODO
     );
 }

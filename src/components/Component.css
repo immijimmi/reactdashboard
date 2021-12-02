@@ -1,0 +1,5 @@
+/* Generic styles that can be used by multiple components go here */
+
+.roundedBox {
+    border-radius: 5px;
+}

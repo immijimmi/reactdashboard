@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import PageData from "../../cls/constants";
 import Welcome from "../Welcome/Welcome";
 import NotFound from "../NotFound/NotFound";
+import { PageContext } from "../../App";
 
 function PageManager(props) {
-    switch (props.page) {
+    const {page, setPage} = useContext(PageContext)
+
+    switch (page) {
         case PageData.keys.welcome:
             return (
                 <Welcome />
