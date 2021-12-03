@@ -7,8 +7,7 @@
 
 .rounded {
     border-radius: 5px;
-    margin: 4px;
-    padding: 4px;
+    margin: 8px;
 }
 
 .centeredChildren {
@@ -17,7 +16,12 @@
     justify-content: center;
 }
 
-.verticalCenteredChildren {
+.xCenteredChildren {
+    display: flex;
+    justify-content: center;
+}
+
+.yCenteredChildren {
     display: flex;
     align-items: center;
 }

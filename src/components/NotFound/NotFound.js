@@ -4,7 +4,7 @@ import "./NotFound.css"
 
 function NotFound() {
     return (
-        <div className="bannerImage">
+        <div className="xCenteredChildren bannerImage">
             <img src={notFoundImage} alt="Page not found" />
         </div>
     );

@@ -1,0 +1,15 @@
+.doubleImageContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.biggerImage {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.smallerImage {
+    position: absolute;
+}
