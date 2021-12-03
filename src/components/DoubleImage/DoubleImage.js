@@ -11,7 +11,7 @@ function DoubleImage(props) {
         throw RangeError("DoubleImage.props.offset cannot be given both a positive and a negative number.")
     }
 
-    // isFirstImageBigger includes cases where both images are the same size
+    // isFirstImageBigger will also evaluate to true in cases where both images are the same size
     const isFirstImageBigger = (props.offset[0] + props.offset[1]) >= 0;
     const absOffset = [Math.abs(props.offset[0]), Math.abs(props.offset[1])];
 
