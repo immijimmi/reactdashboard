@@ -14,10 +14,7 @@ function NavBar() {
                 Home
             </button>
             <button className={buttonClasses} onClick={() => navigate("/nftbro")}>
-                Ebic NFT Gallery
-            </button>
-            <button className={buttonClasses} onClick={() => navigate("/notfound")}>
-                ?
+                NFT Gallery
             </button>
         </div>
     );
