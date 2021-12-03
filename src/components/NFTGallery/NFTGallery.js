@@ -7,7 +7,12 @@ import "./NFTGallery.css";
 function NFTGallery() {
     return (
         <div className="rounded galleryBackground">
-            <DoubleImage images={[yerBaby, nftFrame]} offset={[-20, -20]} alt="'yer baby' (2021, Paint.NET)" containerClassName="galleryItem" />
+            <DoubleImage
+                images={[yerBaby, nftFrame]}
+                offset={[-20, -20]}
+                alt="'yer baby' (2021, Paint.NET)"
+                containerClassName="galleryItem"
+            />
         </div>
     );
 }

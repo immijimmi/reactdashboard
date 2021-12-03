@@ -1,4 +1,4 @@
 .galleryBackground {
     background-color: rgba(80, 53, 178, 0.35);
-    padding: 35px;
+    padding: 35px;  /* TODO: Margin doesn't appear to work here, this may cause spacing issues between gallery items */
 }

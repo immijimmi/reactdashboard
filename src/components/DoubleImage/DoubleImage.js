@@ -11,7 +11,8 @@ function DoubleImage(props) {
         throw RangeError("DoubleImage.props.offset cannot be given both a positive and a negative number.")
     }
 
-    const isFirstImageBigger = (props.offset[0] + props.offset[1]) >= 0;  // Includes cases where both images are the same size
+    // isFirstImageBigger includes cases where both images are the same size
+    const isFirstImageBigger = (props.offset[0] + props.offset[1]) >= 0;
     const absOffset = [Math.abs(props.offset[0]), Math.abs(props.offset[1])];
 
     const smallerImageStyle = { top: `${absOffset[1]}px`, left: `${absOffset[0]}px` }; 
@@ -19,15 +20,33 @@ function DoubleImage(props) {
     if (isFirstImageBigger) {
         return (
             <div className={`${props.containerClassName} doubleImageContainer`}>
-                <img src={props.images[0]} className={`${props.firstClassName} biggerImage`} alt="" />
-                <img src={props.images[1]} className={`${props.secondClassName} smallerImage`} style={smallerImageStyle} alt={props.alt} />
+                <img
+                    src={props.images[0]}
+                    className={`${props.firstClassName} biggerImage`}
+                    alt=""
+                />
+                <img
+                    src={props.images[1]}
+                    className={`${props.secondClassName} smallerImage`}
+                    style={smallerImageStyle}
+                    alt={props.alt}
+                />
             </div>
         );
     } else {
         return (
             <div className={`${props.containerClassName} doubleImageContainer`}>
-                <img src={props.images[0]} className={`${props.firstClassName} smallerImage`} style={smallerImageStyle} alt="" />
-                <img src={props.images[1]} className={`${props.secondClassName} biggerImage`} alt={props.alt} />
+                <img
+                    src={props.images[0]}
+                    className={`${props.firstClassName} smallerImage`}
+                    style={smallerImageStyle}
+                    alt=""
+                />
+                <img
+                    src={props.images[1]}
+                    className={`${props.secondClassName} biggerImage`}
+                    alt={props.alt}
+                />
             </div>
         );
     }
@@ -35,7 +54,8 @@ function DoubleImage(props) {
 
 DoubleImage.propTypes = {
     images: PropTypes.array.isRequired,
-    offset: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,  // Refers to the offset of the second image from the first (can be -ve)
+    // offset refers to the offset of the second image from the first (this can be negative)
+    offset: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
     containerClassName: PropTypes.string,
     firstClassName: PropTypes.string,
     secondClassName: PropTypes.string,

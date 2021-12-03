@@ -10,9 +10,15 @@ function NavBar() {
 
     return (
         <div className="rounded yCenteredChildren headerBar">
-            <button className={buttonClasses} onClick={() => navigate("/")}>Home</button>
-            <button className={buttonClasses} onClick={() => navigate("/nftbro")}>Ebic NFT Gallery</button>
-            <button className={buttonClasses} onClick={() => navigate("/notfound")}>?</button>
+            <button className={buttonClasses} onClick={() => navigate("/")}>
+                Home
+            </button>
+            <button className={buttonClasses} onClick={() => navigate("/nftbro")}>
+                Ebic NFT Gallery
+            </button>
+            <button className={buttonClasses} onClick={() => navigate("/notfound")}>
+                ?
+            </button>
         </div>
     );
 }
