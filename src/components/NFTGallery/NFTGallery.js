@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useSound from 'use-sound';
 import DoubleImage from "../DoubleImage/DoubleImage"
 import nftFrame from "../../../res/nfts/nftFrame.png";
 import yerBaby from "../../../res/nfts/yer_baby.png";
 import redApe from "../../../res/nfts/red_ape.png";
+import music from "../../../res/Bach - Air on the G String.mp3"
 import "./NFTGallery.css";
 
 function NFTGallery() {
+    const [play, { stop }] = useSound(music, {volume: 0.35});
+    useEffect(() => {
+        play();
+        return () => stop();
+    });
+
     const artPieces = [
         [yerBaby, "'yer babee' (2021, Paint.NET)"],
         [redApe, "'maroon monke' (2021, Paint.NET)"]
