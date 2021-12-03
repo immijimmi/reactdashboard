@@ -1,8 +1,10 @@
 import React from "react";
+import "./Welcome.css";
 
 function Welcome() {
     return (
-        <div>
+        <div className="rounded xCenteredChildren welcomeMessage">
+            Click a button up top to get started!
         </div>  // TODO
     );
 }
