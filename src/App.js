@@ -8,18 +8,18 @@ import "./App.css";
 
 
 function App() {
-  return (
-    <Router>
-      <div className="app">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/notfound" element={<NotFound />} />
-          <Route path="/nftbro" element={<NFTGallery />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className="app">
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={<Welcome />} />
+                    <Route path="/notfound" element={<NotFound />} />
+                    <Route path="/nftbro" element={<NFTGallery />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
