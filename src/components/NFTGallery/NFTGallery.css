@@ -1,5 +1,5 @@
 .galleryBackground {
-    background-color: rgba(80, 53, 178, 0.35);
+    background-color: rgba(80, 53, 178, 0.15);
     display: flex;
     flex-wrap: wrap;
     padding: 35px;
