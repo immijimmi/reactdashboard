@@ -1,12 +1,18 @@
 /* Generic styles that can be used by multiple components go here */
 
 .baseFont {
-    font-size: 18px;
     font-family: "Helvetica";
+}
+
+.mediumFontSize {
+    font-size: 18px;
 }
 
 .rounded {
     border-radius: 5px;
+}
+
+.mediumMargin {
     margin: 6px;
 }
 

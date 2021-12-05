@@ -1,23 +1,35 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../Component.css";
-import "./NavBar.css"
+import componentStyles from "../Component.module.css";
+import styles from "./NavBar.module.css";
 
 function NavBar() {
     const navigate = useNavigate();
 
-    const buttonClasses = "baseFont rounded button"
+    const divStyle = {
+        ...componentStyles.rounded,
+        ...componentStyles.mediumMargin,
+        ...componentStyles.yCenteredChildren,
+        ...styles.headerBar
+    };
+    const buttonStyle = {
+        ...componentStyles.baseFont,
+        ...componentStyles.mediumFontSize,
+        ...componentStyles.rounded,
+        ...componentStyles.mediumMargin,
+        ...componentStyles.button,
+    };
 
     return (
-        <div className="rounded yCenteredChildren headerBar">
-            <button className={buttonClasses} onClick={() => navigate("/")}>
+        <div style={divStyle}>
+            <button style={buttonStyle} onClick={() => navigate("/")}>
                 Home
             </button>
-            <button className={buttonClasses} onClick={() => navigate("/nftbro")}>
+            <button style={buttonStyle} onClick={() => navigate("/nftbro")}>
                 NFT Gallery
             </button>
         </div>
     );
-}
+};
 
 export default NavBar;

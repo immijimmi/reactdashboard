@@ -1,0 +1,29 @@
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./ImageWithText.module.css";
+
+function ImageWithText(props) {
+    const textDivFullStyle = {
+        ...styles.textOverlayDiv,
+        left: `${props.offset[0]}px`,
+        top: `${props.offset[1]}px`
+    };
+
+    return (
+        <div style={styles.imageWithTextContainer}>
+            <img src={props.image} alt={props.alt} />
+            <div style={textDivFullStyle}>
+                <p>{props.text}</p>
+            </div>
+        </div>
+    );
+};
+
+ImageWithText.propTypes = {
+    image: PropTypes.object.isRequired,
+    offset: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+    text: PropTypes.string.isRequired,
+    alt: PropTypes.string
+};
+
+export default ImageWithText;

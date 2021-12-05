@@ -1,0 +1,7 @@
+.imageWithTextContainer {
+    position: relative;
+}
+
+.textOverlayDiv {
+    position: absolute;
+}

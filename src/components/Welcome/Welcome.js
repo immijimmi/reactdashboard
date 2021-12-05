@@ -1,12 +1,20 @@
 import React from "react";
-import "./Welcome.css";
+import componentStyles from "../Component.module.css";
+import styles from "./Welcome.module.css";
 
 function Welcome() {
+    const divStyle = {
+        ...componentStyles.rounded,
+        ...componentStyles.mediumMargin,
+        ...componentStyles.xCenteredChildren,
+        ...styles.welcomeMessage
+    };
+
     return (
-        <div className="rounded xCenteredChildren welcomeMessage">
+        <div style={divStyle}>
             Click a button up top to get started!
-        </div>  // TODO
+        </div>
     );
-}
+};
 
 export default Welcome;

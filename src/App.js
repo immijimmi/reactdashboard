@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Welcome from "./components/Welcome/Welcome";
 import NotFound from "./components/NotFound/NotFound";
-import NFTGallery from "./components/NFTGallery/NFTGallery"
+import NFTGallery from "./components/NFTGallery/NFTGallery";
 import "./App.css";
 
 
 function App() {
     return (
         <Router>
-            <div className="app">
+            <div>
                 <NavBar />
                 <Routes>
                     <Route path="/" element={<Welcome />} />
@@ -20,6 +20,6 @@ function App() {
             </div>
         </Router>
     );
-}
+};
 
 export default App;
