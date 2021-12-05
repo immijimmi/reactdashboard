@@ -9,11 +9,24 @@ function ImageWithText(props) {
         top: `${props.offset[1]}px`
     };
 
+    function getParagraphs() {
+        var lines = props.text.split("\n")
+        var result = [];
+
+        lines.forEach((line) => {
+            result.push(<p>{line}</p>)
+        });
+
+        return result;
+    };
+
     return (
         <div style={styles.imageWithTextContainer}>
             <img src={props.image} alt={props.alt} />
             <div style={textDivFullStyle}>
-                <p>{props.text}</p>
+                {
+                    getParagraphs()
+                }
             </div>
         </div>
     );
