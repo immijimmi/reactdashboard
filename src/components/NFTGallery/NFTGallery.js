@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useSound from 'use-sound';
+import useSound from "use-sound";
 import DoubleImage from "../DoubleImage/DoubleImage"
 import nftFrame from "../../../res/nfts/nftFrame.png";
 import yerBaby from "../../../res/nfts/yer_baby.png";
