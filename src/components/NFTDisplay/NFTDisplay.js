@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import DoubleImage from "../DoubleImage/DoubleImage";
 import ImageWithText from "../ImageWithText/ImageWithText";
+import styles from "./nftDisplay.module.css";
 
 function NFTDisplay(props) {
     const nftOffset = [-20, -20];
@@ -35,6 +36,9 @@ function NFTDisplay(props) {
                     offset={plaqueOffset}
                     text={plaqueText}
                     alt="NFT plaque"
+                    classNames={{
+                        text: styles.plaque
+                    }}
                 />
             </div>
         </div>

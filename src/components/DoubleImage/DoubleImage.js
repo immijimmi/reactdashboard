@@ -19,7 +19,7 @@ function DoubleImage(props) {
         left: `${absOffset[0]}px`
     };
 
-    const containerClassName = `${styles.doubleImageContainer}`;
+    const containerClassName = styles.doubleImageContainer;
 
     const baseImageClassName = `${isBaseImageBigger ? styles.biggerImage : styles.smallerImage}`;
     const baseImageStyle = {

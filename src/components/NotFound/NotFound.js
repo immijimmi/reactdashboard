@@ -4,8 +4,7 @@ import componentStyles from "../component.module.css";
 import styles from "./notFound.module.css";
 
 function NotFound() {
-    let divClassName = `${componentStyles.xCentredChildren}`;
-    divClassName += ` ${styles.bannerImage}`;
+    const divClassName = `${componentStyles.xCentredChildren} ${styles.bannerImage}`;
 
     return (
         <div className={divClassName}>

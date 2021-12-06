@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./imageWithText.module.css";
 
 function ImageWithText(props) {
-    let textDivClassName = `${styles.textOverlayDiv}`;
+    let textDivClassName = styles.textOverlayDiv;
     textDivClassName += props.classNames?.text ? ` ${props.classNames.text}` : "";
     const textDivStyle = {
         left: `${props.offset[0]}px`,
