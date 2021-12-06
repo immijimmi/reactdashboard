@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import componentStyles from "../Component.module.css";
-import styles from "./NavBar.module.css";
+import componentStyles from "../component.module.css";
+import styles from "./navBar.module.css";
 
 function NavBar() {
     const navigate = useNavigate();

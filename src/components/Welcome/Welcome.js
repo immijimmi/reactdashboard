@@ -1,6 +1,6 @@
 import React from "react";
-import componentStyles from "../Component.module.css";
-import styles from "./Welcome.module.css";
+import componentStyles from "../component.module.css";
+import styles from "./welcome.module.css";
 
 function Welcome() {
     const divStyle = {

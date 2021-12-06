@@ -1,7 +1,7 @@
 import React from "react";
 import notFoundImage from "../../../res/notfound.png";
-import componentStyles from "../Component.module.css"; 
-import styles from "./NotFound.module.css";
+import componentStyles from "../component.module.css"; 
+import styles from "./notFound.module.css";
 
 function NotFound() {
     const divStyle = {

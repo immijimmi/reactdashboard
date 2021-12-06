@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./ImageWithText.module.css";
+import styles from "./imageWithText.module.css";
 
 function ImageWithText(props) {
     const textDivFullStyle = {

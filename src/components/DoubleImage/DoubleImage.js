@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./DoubleImage.module.css";
+import styles from "./doubleImage.module.css";
 
 function DoubleImage(props) {
     // Sanity check for offset values

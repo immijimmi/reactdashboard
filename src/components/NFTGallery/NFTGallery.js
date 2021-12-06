@@ -6,8 +6,8 @@ import yerBaby from "../../../res/nfts/yer_baby.png";
 import redApe from "../../../res/nfts/red_ape.png";
 import music from "../../../res/Bach - Air on the G String.mp3";
 import NFTDisplay from "../NFTDisplay/NFTDisplay";
-import componentStyles from "../Component.module.css";
-import styles from "./NFTGallery.module.css";
+import componentStyles from "../component.module.css";
+import styles from "./nftGallery.module.css";
 
 function NFTGallery() {
     const [play, { stop }] = useSound(music, {volume: 0.35});
