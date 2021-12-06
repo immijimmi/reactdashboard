@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import DoubleImage from "../DoubleImage/DoubleImage";
 import ImageWithText from "../ImageWithText/ImageWithText";
+import componentStyles from "../component.module.css";
 import styles from "./nftDisplay.module.css";
 
 function NFTDisplay(props) {
@@ -20,27 +21,25 @@ function NFTDisplay(props) {
         return result;
     };
     const plaqueText = generatePlaqueText();
+    const plaqueTextClassName = `${componentStyles.baseFont} ${styles.plaqueText}`;
 
     return (
         <div className={props.classNames?.container}>
-            <div>
-                <DoubleImage
-                    images={[props.image, props.frame]}
-                    offset={nftOffset}
-                    alt={plaqueText}
-                />
-            </div>
-            <div>
-                <ImageWithText
-                    image={props.plaque}
-                    offset={plaqueOffset}
-                    text={plaqueText}
-                    alt="NFT plaque"
-                    classNames={{
-                        text: styles.plaque
-                    }}
-                />
-            </div>
+            <DoubleImage
+                images={[props.image, props.frame]}
+                offset={nftOffset}
+                alt={plaqueText}
+            />
+            <ImageWithText
+                image={props.plaque}
+                offset={plaqueOffset}
+                text={plaqueText}
+                alt="NFT plaque"
+                classNames={{
+                    text: plaqueTextClassName,
+                    container: styles.plaque
+                }}
+            />
         </div>
     );
 };
