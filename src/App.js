@@ -6,7 +6,6 @@ import NotFound from "./components/NotFound/NotFound";
 import NFTGallery from "./components/NFTGallery/NFTGallery";
 import "./App.css";
 
-
 function App() {
     return (
         <Router>

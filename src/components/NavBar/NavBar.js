@@ -6,26 +6,22 @@ import styles from "./navBar.module.css";
 function NavBar() {
     const navigate = useNavigate();
 
-    const divStyle = {
-        ...componentStyles.rounded,
-        ...componentStyles.mediumMargin,
-        ...componentStyles.yCenteredChildren,
-        ...styles.headerBar
-    };
-    const buttonStyle = {
-        ...componentStyles.baseFont,
-        ...componentStyles.mediumFontSize,
-        ...componentStyles.rounded,
-        ...componentStyles.mediumMargin,
-        ...componentStyles.button,
-    };
+    var divClassName = `${componentStyles.rounded}`;
+    divClassName += ` ${componentStyles.mediumMargin}`;
+    divClassName += ` ${componentStyles.yCenteredChildren}`;
+    divClassName += ` ${styles.headerBar}`;
+    var buttonClassName = `${componentStyles.baseFont}`;
+    buttonClassName += ` ${componentStyles.mediumFontSize}`;
+    buttonClassName += ` ${componentStyles.rounded}`;
+    buttonClassName += ` ${componentStyles.mediumMargin}`;
+    buttonClassName += ` ${componentStyles.button}`;
 
     return (
-        <div style={divStyle}>
-            <button style={buttonStyle} onClick={() => navigate("/")}>
+        <div className={divClassName}>
+            <button className={buttonClassName} onClick={() => navigate("/")}>
                 Home
             </button>
-            <button style={buttonStyle} onClick={() => navigate("/nftbro")}>
+            <button className={buttonClassName} onClick={() => navigate("/nftbro")}>
                 NFT Gallery
             </button>
         </div>

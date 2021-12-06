@@ -1,21 +1,29 @@
 import React, { useEffect } from "react";
 import useSound from "use-sound";
-import nftFrame from "../../../res/nfts/nftFrame.png";
-import nftPlaque from "../../../res/nfts/nftPlaque.png";
-import yerBaby from "../../../res/nfts/yer_baby.png";
-import redApe from "../../../res/nfts/red_ape.png";
-import ponderin from "../../../res/nfts/ponderin.png";
-import music from "../../../res/Bach - Air on the G String.mp3";
 import NFTDisplay from "../NFTDisplay/NFTDisplay";
 import componentStyles from "../component.module.css";
 import styles from "./nftGallery.module.css";
 
 function NFTGallery() {
+    const musicUrl = window.location.origin + "/res/bachAir.mp3";
+    const music = require(musicUrl);
     const [play, { stop }] = useSound(music, {volume: 0.25});
     useEffect(() => {
         play();
         return () => stop();
     });
+
+    const nftFrameUrl = window.location.origin + "/res/nfts/nftFrame.png";
+    const nftFrame = require(nftFrameUrl);
+    const nftPlaqueUrl = window.location.origin + "/res/nfts/nftFrame.png";
+    const nftPlaque = require(nftPlaqueUrl);
+
+    const yerBabyUrl = window.location.origin + "/res/nfts/yer_baby.png";
+    const yerBaby = require(yerBabyUrl);
+    const redApeUrl = window.location.origin + "/res/nfts/red_ape.png"
+    const redApe = require(redApeUrl);
+    const ponderinUrl = window.location.origin + "/res/nfts/ponderin.png";
+    const ponderin = require(ponderinUrl);
 
     const divStyle = {
         ...componentStyles.rounded,

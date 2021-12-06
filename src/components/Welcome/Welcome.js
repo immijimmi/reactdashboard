@@ -3,15 +3,13 @@ import componentStyles from "../component.module.css";
 import styles from "./welcome.module.css";
 
 function Welcome() {
-    const divStyle = {
-        ...componentStyles.rounded,
-        ...componentStyles.mediumMargin,
-        ...componentStyles.xCenteredChildren,
-        ...styles.welcomeMessage
-    };
+    var divClassName = `${componentStyles.rounded}`;
+    divClassName += ` ${componentStyles.mediumMargin}`;
+    divClassName += ` ${componentStyles.xCenteredChildren}`;
+    divClassName += ` ${styles.welcomeMessage}`;
 
     return (
-        <div style={divStyle}>
+        <div className={divClassName}>
             Click a button up top to get started!
         </div>
     );
