@@ -1,18 +1,14 @@
 import React from "react";
+import notFoundImage from "../../res/notFound.png";
 import componentStyles from "../component.module.css"; 
 import styles from "./notFound.module.css";
 
 function NotFound() {
-    const notFoundImageUrl = window.location.origin + "/res/notFound.png";
-    const notFoundImage = require(notFoundImageUrl);
-
-    const divStyle = {
-        ...componentStyles.xCentredChildren,
-        ...styles.bannerImage
-    };
+    let divClassName = `${componentStyles.xCentredChildren}`;
+    divClassName += ` ${styles.bannerImage}`;
 
     return (
-        <div style={divStyle}>
+        <div className={divClassName}>
             <img src={notFoundImage} alt="Page not found" />
         </div>
     );

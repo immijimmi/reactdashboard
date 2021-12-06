@@ -4,14 +4,14 @@ import DoubleImage from "../DoubleImage/DoubleImage";
 import ImageWithText from "../ImageWithText/ImageWithText";
 
 function NFTDisplay(props) {
-    const nftOffset = [20, 20];
-    const plaqueOffset = [0, 0];  // TODO
+    const nftOffset = [-20, -20];
+    const plaqueOffset = [20, 18];
 
     function generatePlaqueText() {
-        var result = "";
-        var details = props.details || {};
+        let result = "";
 
-        result += (details.name ? `'${details.name}'` : "Untitled") + "\n";
+        const details = props.details || {};
+        result += (details.name ? `${details.name}` : "Untitled") + "\n";
         result += (details.creator_name ? details.creator_name : "Unknown Artist") + "\n";
         result += (details.created_year ? details.created_year.toString() : "Unknown Year") + ", "
         result += (details.art_medium ? details.art_medium : "Digital")
@@ -21,7 +21,7 @@ function NFTDisplay(props) {
     const plaqueText = generatePlaqueText();
 
     return (
-        <div style={(props.styles && props.styles.container)}>
+        <div className={(props.classNames && props.classNames.container)}>
             <div>
                 <DoubleImage
                     images={[props.image, props.frame]}
@@ -42,17 +42,17 @@ function NFTDisplay(props) {
 };
 
 NFTDisplay.propTypes = {
-    image: PropTypes.object.isRequired,
-    frame: PropTypes.object.isRequired,
-    plaque: PropTypes.object.isRequired,
+    image: PropTypes.string.isRequired,
+    frame: PropTypes.string.isRequired,
+    plaque: PropTypes.string.isRequired,
     details: PropTypes.shape({
         name: PropTypes.string,
         created_year: PropTypes.number,
         creator_name: PropTypes.string,
         art_medium: PropTypes.string
     }),
-    styles: PropTypes.shape({
-        container: PropTypes.object
+    classNames: PropTypes.shape({
+        container: PropTypes.string
     })
 };
 

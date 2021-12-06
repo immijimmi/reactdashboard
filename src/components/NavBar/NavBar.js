@@ -6,11 +6,11 @@ import styles from "./navBar.module.css";
 function NavBar() {
     const navigate = useNavigate();
 
-    var divClassName = `${componentStyles.rounded}`;
+    let divClassName = `${componentStyles.rounded}`;
     divClassName += ` ${componentStyles.mediumMargin}`;
     divClassName += ` ${componentStyles.yCenteredChildren}`;
     divClassName += ` ${styles.headerBar}`;
-    var buttonClassName = `${componentStyles.baseFont}`;
+    let buttonClassName = `${componentStyles.baseFont}`;
     buttonClassName += ` ${componentStyles.mediumFontSize}`;
     buttonClassName += ` ${componentStyles.rounded}`;
     buttonClassName += ` ${componentStyles.mediumMargin}`;

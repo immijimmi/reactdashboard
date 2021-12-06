@@ -3,7 +3,7 @@ import componentStyles from "../component.module.css";
 import styles from "./welcome.module.css";
 
 function Welcome() {
-    var divClassName = `${componentStyles.rounded}`;
+    let divClassName = `${componentStyles.rounded}`;
     divClassName += ` ${componentStyles.mediumMargin}`;
     divClassName += ` ${componentStyles.xCenteredChildren}`;
     divClassName += ` ${styles.welcomeMessage}`;

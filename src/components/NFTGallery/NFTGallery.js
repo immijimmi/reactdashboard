@@ -1,39 +1,33 @@
 import React, { useEffect } from "react";
 import useSound from "use-sound";
 import NFTDisplay from "../NFTDisplay/NFTDisplay";
+import music from "../../res/bachAir.mp3";
+import nftFrame from "../../res/nfts/nftFrame.png";
+import nftPlaque from "../../res/nfts/nftPlaque.png";
 import componentStyles from "../component.module.css";
 import styles from "./nftGallery.module.css";
 
 function NFTGallery() {
-    const musicUrl = window.location.origin + "/res/bachAir.mp3";
-    const music = require(musicUrl);
     const [play, { stop }] = useSound(music, {volume: 0.25});
     useEffect(() => {
         play();
         return () => stop();
     });
 
-    const nftFrameUrl = window.location.origin + "/res/nfts/nftFrame.png";
-    const nftFrame = require(nftFrameUrl);
-    const nftPlaqueUrl = window.location.origin + "/res/nfts/nftFrame.png";
-    const nftPlaque = require(nftPlaqueUrl);
+    const imageFilesContext = require.context('../../res', true, /\.(png|jpe?g)$/);
+    const images = {};
+    for (const imageContextUrl of imageFilesContext.keys()) {
+        // Store images using their context-relative URLs as keys
+        images[imageContextUrl] = imageFilesContext(imageContextUrl)["default"]
+    }
 
-    const yerBabyUrl = window.location.origin + "/res/nfts/yer_baby.png";
-    const yerBaby = require(yerBabyUrl);
-    const redApeUrl = window.location.origin + "/res/nfts/red_ape.png"
-    const redApe = require(redApeUrl);
-    const ponderinUrl = window.location.origin + "/res/nfts/ponderin.png";
-    const ponderin = require(ponderinUrl);
-
-    const divStyle = {
-        ...componentStyles.rounded,
-        ...componentStyles.mediumMargin,
-        ...styles.galleryBackground
-    };
+    let divClassName = `${componentStyles.rounded}`;
+    divClassName += ` ${componentStyles.mediumMargin}`;
+    divClassName += ` ${styles.galleryBackground}`;
 
     const nftData = [
         [
-            yerBaby,
+            images["./nfts/yer_baby.png"],
             {
                 name: "yer babee",
                 created_year: 2021,
@@ -42,7 +36,7 @@ function NFTGallery() {
             }
         ],
         [
-            redApe,
+            images["./nfts/red_ape.png"],
             {
                 name: "maroon monke",
                 created_year: 2021,
@@ -51,7 +45,7 @@ function NFTGallery() {
             }
         ],
         [
-            ponderin,
+            images["./nfts/ponderin.png"],
             {
                 name: "Ponderin'",
                 created_year: 2021,
@@ -62,7 +56,7 @@ function NFTGallery() {
     ];
 
     function getGalleryItems() {
-        var result = [];
+        const result = [];
 
         for (const [index, [image, details]] of nftData.entries()) {
             result.push(
@@ -72,7 +66,9 @@ function NFTGallery() {
                     frame={nftFrame}
                     plaque={nftPlaque}
                     key={index.toString()}
-                    style={styles.galleryItem}
+                    classNames={{
+                        container: styles.galleryItem
+                    }}
                 />
             );
         }
@@ -81,7 +77,7 @@ function NFTGallery() {
     };
 
     return (
-        <div style={divStyle}>
+        <div className={divClassName}>
             {
                 getGalleryItems()
             }

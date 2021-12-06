@@ -3,40 +3,31 @@ import PropTypes from "prop-types";
 import styles from "./imageWithText.module.css";
 
 function ImageWithText(props) {
-    const textDivFullStyle = {
-        ...styles.textOverlayDiv,
+    let textDivClassName = `${styles.textOverlayDiv}`;
+    textDivClassName += props.classNames?.text ? ` ${props.classNames.text}` : "";
+    const textDivStyle = {
         left: `${props.offset[0]}px`,
         top: `${props.offset[1]}px`
     };
 
-    function getParagraphs() {
-        var lines = props.text.split("\n")
-        var result = [];
-
-        lines.forEach((line) => {
-            result.push(<p>{line}</p>)
-        });
-
-        return result;
-    };
-
     return (
-        <div style={styles.imageWithTextContainer}>
+        <div className={styles.imageWithTextContainer}>
             <img src={props.image} alt={props.alt} />
-            <div style={textDivFullStyle}>
-                {
-                    getParagraphs()
-                }
+            <div className={textDivClassName} style={textDivStyle}>
+                { props.text }
             </div>
         </div>
     );
 };
 
 ImageWithText.propTypes = {
-    image: PropTypes.object.isRequired,
+    image: PropTypes.string.isRequired,
     offset: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
     text: PropTypes.string.isRequired,
-    alt: PropTypes.string
+    alt: PropTypes.string,
+    classNames: PropTypes.shape({
+        text: PropTypes.string
+    })
 };
 
 export default ImageWithText;
