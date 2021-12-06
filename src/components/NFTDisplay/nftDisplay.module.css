@@ -1,3 +1,8 @@
 .plaque {
-    
+    font-size: 24px;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    font-style: italic;
+
+    color: rgba(71, 57, 0, 1);
 }

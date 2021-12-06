@@ -6,7 +6,7 @@ import styles from "./nftDisplay.module.css";
 
 function NFTDisplay(props) {
     const nftOffset = [-20, -20];
-    const plaqueOffset = [20, 18];
+    const plaqueOffset = [22, 17];
 
     function generatePlaqueText() {
         let result = "";
