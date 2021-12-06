@@ -10,18 +10,18 @@ function NFTDisplay(props) {
     function generatePlaqueText() {
         let result = "";
 
-        const details = props.details || {};
-        result += (details.name ? `${details.name}` : "Untitled") + "\n";
-        result += (details.creator_name ? details.creator_name : "Unknown Artist") + "\n";
+        const details = props.details ?? {};
+        result += (details.name ?? "Untitled") + "\n";
+        result += (details.creator_name ?? "Unknown Artist") + "\n";
         result += (details.created_year ? details.created_year.toString() : "Unknown Year") + ", "
-        result += (details.art_medium ? details.art_medium : "Digital")
+        result += (details.art_medium ?? "Digital")
 
         return result;
     };
     const plaqueText = generatePlaqueText();
 
     return (
-        <div className={(props.classNames && props.classNames.container)}>
+        <div className={props.classNames?.container}>
             <div>
                 <DoubleImage
                     images={[props.image, props.frame]}
