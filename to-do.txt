@@ -1,6 +1,5 @@
 Backlog:
-- App theme (e.g. colour palette) should be in a class at the App level and passed into sub-components.
-  Split out any CSS that fits this description accordingly from component CSS modules
+- Apply CSS themes as you did in the take home test
 
 Icebox:
 -
