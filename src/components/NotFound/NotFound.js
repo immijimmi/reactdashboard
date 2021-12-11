@@ -4,10 +4,10 @@ import componentStyles from "../component.module.css";
 import styles from "./notFound.module.css";
 
 function NotFound() {
-    const divClassName = `${componentStyles.xCentredChildren} ${styles.bannerImage}`;
+    const containerClassName = `${componentStyles.xCentredChildren} ${styles.bannerImage}`;
 
     return (
-        <div className={divClassName}>
+        <div className={containerClassName}>
             <img src={notFoundImage} alt="Page not found" />
         </div>
     );

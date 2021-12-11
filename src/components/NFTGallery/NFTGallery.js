@@ -21,8 +21,8 @@ function NFTGallery() {
         images[imageContextUrl] = imageFilesContext(imageContextUrl)["default"]
     }
 
-    let divClassName = `${componentStyles.rounded} ${componentStyles.mediumMargin}`;
-    divClassName += ` ${styles.galleryBackground}`;
+    let containerClassName = `${componentStyles.rounded} ${componentStyles.mediumMargin}`;
+    containerClassName += ` ${styles.galleryBackground}`;
 
     const nftData = [
         [
@@ -76,7 +76,7 @@ function NFTGallery() {
     };
 
     return (
-        <div className={divClassName}>
+        <div className={containerClassName}>
             {
                 getGalleryItems()
             }
