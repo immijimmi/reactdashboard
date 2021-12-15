@@ -12,7 +12,7 @@ function NFTDisplay(props) {
     function generatePlaqueText() {
         let result = "";
 
-        const details = props.details ?? {};
+        let details = props.details ?? {};
         result += (details.name ?? "Untitled") + "\n";
         result += (details.creator_name ?? "Unknown Artist") + "\n";
         result += (details.created_year ? details.created_year.toString() : "Unknown Year") + ", "

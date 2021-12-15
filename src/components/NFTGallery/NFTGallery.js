@@ -16,7 +16,7 @@ function NFTGallery() {
 
     const imageFilesContext = require.context('../../res', true, /\.(png|jpe?g)$/);
     const images = {};
-    for (const imageContextUrl of imageFilesContext.keys()) {
+    for (let imageContextUrl of imageFilesContext.keys()) {
         // Store images using their context-relative URLs as keys
         images[imageContextUrl] = imageFilesContext(imageContextUrl)["default"]
     }
@@ -55,9 +55,9 @@ function NFTGallery() {
     ];
 
     function getGalleryItems() {
-        const result = [];
+        let result = [];
 
-        for (const [index, [image, details]] of nftData.entries()) {
+        for (let [index, [image, details]] of nftData.entries()) {
             result.push(
                 <NFTDisplay
                     image={image}
