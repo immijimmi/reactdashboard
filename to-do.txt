@@ -1,8 +1,0 @@
-Backlog:
-- Apply CSS themes as you did in the take home test
-
-Icebox:
--
-
-Notes:
-- 
