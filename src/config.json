@@ -1,0 +1,35 @@
+{
+    "nfts": [
+        {
+            "name": "yer babee",
+            "created_year": 2021,
+            "creator_name": "immijimmi",
+            "art_medium": "Paint.NET",
+            "image": "./res/nfts/yer_baby.png"
+        },
+        {
+            "name": "maroon monke",
+            "created_year": 2021,
+            "creator_name": "immijimmi",
+            "art_medium": "Paint.NET",
+            "image": "./res/nfts/red_ape.png"
+        },
+        {
+            "name": "Ponderin'",
+            "created_year": 2021,
+            "creator_name": "PolloTheChicken",
+            "art_medium": "MS Paint",
+            "image": "./res/nfts/ponderin.png"
+        }
+    ],
+    "resources": {
+        "not_found": "./res/notFound.png",
+        "nft": {
+            "frame": "./res/nfts/nftFrame.png",
+            "plaque": "./res/nfts/nftPlaque.png"
+        },
+        "music": {
+            "bach_air": "./res/bachAir.mp3"
+        }
+    }
+}
